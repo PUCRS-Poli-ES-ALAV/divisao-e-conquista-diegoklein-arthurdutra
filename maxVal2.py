@@ -23,10 +23,34 @@ def maxVal2(A, init, end):
 if __name__ == '__main__':
     inicio = time.time()
     list32 = generateRandomList(100, 32)
-    teste1 = maxVal2(list32)
+    teste1 = maxVal2(list32,0,31)
     fim = time.time()
     print("Lista de 32")
     print("Maior valor da Lista: ", teste1)
     print("Número de Iterações: ", cont)
     print("Tempo de Execução: ",fim - inicio)
     print(" ")
+
+    cont = 0
+    inicio = time.time()
+    list2048 = generateRandomList(3050, 2048)
+    teste2 = maxVal2(list2048,0,2047)
+    fim = time.time()
+    print("Lista de 2048")
+    print("Maior valor da Lista: ", teste2)
+    print("Número de Iterações: ", cont)
+    print("Tempo de Execução: ",fim - inicio)
+    print(" ")
+
+    cont = 0
+    inicio = time.time()
+    listMil = generateRandomList(1050000, 1048576)
+    teste3 = maxVal2(listMil,0,1048575)
+    fim = time.time()
+    print("Lista de 1048575")
+    print("Maior valor da Lista: ", teste3)
+    print("Número de Iterações: ", cont)
+    print("Tempo de Execução: ",fim - inicio)
+    print(" ")
+
+    
